@@ -4,7 +4,8 @@ import json
 import matplotlib.pyplot as plt
 import gold
 
-STOCKS = ['NVDA', 'GC=F', 'ASM.AS', 'GC=F', 'ASM.AS']
+with open('stocks.json', 'r') as f:
+  STOCKS = json.load(f)
 
 def width(stocks):
   return min(len(stocks), 3)
